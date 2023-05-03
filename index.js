@@ -23,7 +23,12 @@ devTracker.init = async function (params) {
 };
 
 async function renderAdmin(req, res) {
-	const groupsData = await groups.getNonPrivilegeGroups('groups:createtime', 0, -1);
+	let groupsData = await groups.getNonPrivilegeGroups('groups:createtime', 0, -1);
+	const filterGroups = [
+		'guests', 'spiders', 'registered-users', 'verified-users',
+		'unverified-users', 'banned-users',
+	];
+	groupsData = groupsData.filter(g => !filterGroups.includes(g.name));
 	groupsData.sort((a, b) => b.system - a.system);
 	res.render('admin/plugins/dev-tracker', { groups: groupsData });
 }
