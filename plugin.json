@@ -1,0 +1,14 @@
+{
+    "library": "./index.js",
+    "hooks": [
+        { "hook": "static:app.load", "method": "init"},
+        { "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
+        { "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" }
+    ],
+    "modules": {
+        "../client/dev-tracker.js": "./public/dev-tracker.js",
+        "../admin/plugins/dev-tracker.js": "./public/admin.js"
+    },
+    "templates": "./templates",
+    "languages": "languages"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "nodebb-plugin-dev-tracker",
+  "version": "1.0.0",
+  "description": "A Plugin that shows posts & topics from specific groups",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NodeBB/nodebb-plugin-dev-tracker"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "dev",
+    "tracker"
+  ],
+  "author": "Baris Usakli <baris@nodebb.org>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "8.39.0",
+    "eslint-config-nodebb": "0.2.1",
+    "eslint-plugin-import": "2.27.5"
+  },
+  "nbbpm": {
+    "compatibility": "^3.0.0"
+  }
+}
