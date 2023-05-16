@@ -80,6 +80,7 @@ async function renderDevTracker(req, res) {
 
 	delete req.query._;
 	res.render('dev-tracker', {
+		title: '[[dev-tracker:dev-tracker]]',
 		showPosts,
 		showTopics,
 		posts: data.posts,
