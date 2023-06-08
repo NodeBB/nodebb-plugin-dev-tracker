@@ -30,7 +30,10 @@ async function renderAdmin(req, res) {
 	];
 	groupsData = groupsData.filter(g => !filterGroups.includes(g.name));
 	groupsData.sort((a, b) => b.system - a.system);
-	res.render('admin/plugins/dev-tracker', { groups: groupsData });
+	res.render('admin/plugins/dev-tracker', {
+		groups: groupsData,
+		title: '[[dev-tracker:dev-tracker]]',
+	});
 }
 
 async function getDevTrackerGroups() {
