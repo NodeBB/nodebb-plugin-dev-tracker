@@ -21,7 +21,7 @@
   "dependencies": {},
   "devDependencies": {
     "eslint": "8.44.0",
-    "eslint-config-nodebb": "0.2.1",
+    "eslint-config-nodebb": "2.0.3",
     "eslint-plugin-import": "2.27.5"
   },
   "nbbpm": {
