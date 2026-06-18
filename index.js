@@ -3,17 +3,17 @@
 
 const querystring = require('querystring');
 
-const _ = require.main.require('lodash');
+const _ = nodebb.require('lodash');
 
-const db = require.main.require('./src/database');
-const routeHelpers = require.main.require('./src/routes/helpers');
-const controllerHelpers = require.main.require('./src/controllers/helpers');
-const topics = require.main.require('./src/topics');
-const groups = require.main.require('./src/groups');
-const posts = require.main.require('./src/posts');
-const privileges = require.main.require('./src/privileges');
-const pagination = require.main.require('./src/pagination');
-const meta = require.main.require('./src/meta');
+const db = nodebb.require('./src/database');
+const routeHelpers = nodebb.require('./src/routes/helpers');
+const controllerHelpers = nodebb.require('./src/controllers/helpers');
+const topics = nodebb.require('./src/topics');
+const groups = nodebb.require('./src/groups');
+const posts = nodebb.require('./src/posts');
+const privileges = nodebb.require('./src/privileges');
+const pagination = nodebb.require('./src/pagination');
+const meta = nodebb.require('./src/meta');
 
 const devTracker = module.exports;
 

@@ -1,7 +1,7 @@
 'use strict';
 
 define('admin/plugins/dev-tracker', ['settings'], function (Settings) {
-	var ACP = {};
+	const ACP = {};
 
 	ACP.init = function () {
 		Settings.load('dev-tracker', $('.dev-tracker-settings'));
