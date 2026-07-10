@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^10.5.0",
+    "eslint": "^10.6.0",
     "eslint-config-nodebb": "^2.0.3"
   },
   "nbbpm": {

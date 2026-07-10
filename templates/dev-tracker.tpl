@@ -28,17 +28,17 @@
 				<div class="flex-shrink-0 pe-2 border-end-md text-sm mb-3 flex-basis-md-200">
 					<div class="nav sticky-md-top d-flex flex-row flex-md-column flex-wrap gap-1" style="top: 1rem; z-index: 1;">
 						<a href="dev-tracker?posts=1" class="btn btn-sm fw-semibold {{{ if showPosts }}}active btn-primary{{{ else }}}btn-outline-secondary{{{ end }}}">
-							[[global:posts]]
+							{{tx("global:posts")}}
 						</a>
 						<a href="dev-tracker?topics=1" class="btn btn-sm fw-semibold {{{ if showTopics }}}active btn-primary{{{ else }}}btn-outline-secondary{{{ end }}}">
-							[[global:topics]]
+							{{tx("global:topics")}}
 						</a>
 					</div>
 				</div>
 				<div class="flex-grow-1 ps-md-2 ps-lg-5" style="min-width:0;">
 					{{{ if showPosts }}}
 					{{{ if !posts.length  }}}
-					<div class="alert alert-warning text-center">[[dev-tracker:no-posts-found]]</div>
+					<div class="alert alert-warning text-center">{{tx("dev-tracker:no-posts-found")}}</div>
 					{{{ end }}}
 
 					<!-- IMPORT partials/posts_list.tpl -->
@@ -46,7 +46,7 @@
 
 					{{{ if showTopics }}}
 					{{{ if !topics.length  }}}
-					<div class="alert alert-warning text-center">[[dev-tracker:no-topics-found]]</div>
+					<div class="alert alert-warning text-center">{{tx("dev-tracker:no-topics-found")}}</div>
 					{{{ end }}}
 					<!-- IMPORT partials/topics_list.tpl -->
 					{{{ end }}}
