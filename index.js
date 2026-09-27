@@ -64,11 +64,13 @@ async function renderDevTracker(req, res) {
 		showPosts = true;
 	}
 
-	const [uids, groupData, categoryData] = await Promise.all([
+	let [uids, groupData, categoryData] = await Promise.all([
 		getDevTrackerUidsFromGroups(currentGroup ? [currentGroup] : groupNames),
 		groups.getGroupsData(groupNames),
 		controllerHelpers.getSelectedCategory(cids, req.uid),
 	]);
+
+	groupData = Array.isArray(groupData) ? groupData.filter(Boolean) : [];
 
 	groupData.forEach((group) => {
 		group.selected = group.name === req.query.group;
