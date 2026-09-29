@@ -57,7 +57,8 @@ async function renderDevTracker(req, res) {
 	const page = Math.max(1, parseInt(req.query.page, 10) || 1);
 	const cids = getCidsArray(req.query.cid);
 	const groupNames = await getDevTrackerGroups();
-	const currentGroup = req.query.group || '';
+	const requestedGroup = req.query.group || '';
+	const currentGroup = groupNames.includes(requestedGroup) ? requestedGroup : '';
 	let showPosts = parseInt(req.query.posts, 10) === 1;
 	const showTopics = parseInt(req.query.topics, 10) === 1;
 	if (!showPosts && !showTopics) {
